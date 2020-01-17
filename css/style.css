@@ -1,3 +1,11 @@
+@font-face {
+  font-family:font_strong;
+  src:url('../font/georgia.ttf') format('truetype'),
+  url('../font/georgia-italic.ttf') format('embedded-opentype'),
+  url('../font/georgia-bold.ttf') format('woff;');
+  font-weight:normal;
+   font-style:normal;
+  }
 /* HTML5 display-role reset for older browsers */
 body{
   
@@ -64,7 +72,7 @@ background-image: url("../img/nav-toggle.png");
 }
 /* End custom navbar */
 
-/* Custom info header */
+/* Custom info hexder */
 .info-header{
   padding-top:24px;
   padding-bottom: 24px;
@@ -76,16 +84,32 @@ background-image: url("../img/nav-toggle.png");
   height: 27px;
 }
 .right-info-header input{
-  background:none;
+
   border:none;
   height: 27px;
 }
-.left-info-header label{
+form #search{
+  background-color: transparent !important;
+}
+.left-info-header{
+  display: flex;
+}
+.left-info-header p{
   font-family: Georgia;
   font-size: 12px;
   text-decoration: underline;
-  padding-left: 15px;
+  color:#666666;
   
+  
+}
+.info-tel{
+
+  padding-left: 15px ;
+  padding-right: 6px;
+}
+.info-mail{
+  padding-left: 6px;
+  border-left: 1px solid #666666;
 }
 .contact-header{
   padding: 0px;
@@ -98,7 +122,7 @@ background-image: url("../img/nav-toggle.png");
   -webkit-border-radius: 123px 123px 123px 123px;
   border: 0px solid #000000;
 }
-.search-box{
+/* .search-box{
   width: 20px;
     height: 20px;
     background: black;
@@ -107,16 +131,50 @@ background-image: url("../img/nav-toggle.png");
     position: relative;
     box-sizing: border-box;
     cursor: pointer;
+} */
+.btn.active.focus, .btn.active:focus,
+.btn.focus, .btn:active.focus, 
+.btn:active:focus, .btn:focus {
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  outline: none !important;
 }
+input{
+  -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+.form-search{
+  max-width: 210px;
+  background-color: #c0beb6;
+  float: right;
+  width: 210px;
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: nowrap;
 
+}
+.form-search input{
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: none;
+}
+.search-box {
+  background: black;
+  border-radius: 50%;
+  height: 26px;
+  width: 18px;
+  position: relative;
+  right:4px;
+}
 .fa-search:before {
   content: "\f002";
   height: 50%;
   color: #d2cbcb;
-  font-size: 11px;
+  font-size: 14px;
   margin: auto;
   top: 5px;
-  left: 5px;
+  left: 6px;
   position: absolute;
 }
 .menu-header .row{
@@ -493,6 +551,13 @@ footer .row{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    }
+    form{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    
     }
     
 }
